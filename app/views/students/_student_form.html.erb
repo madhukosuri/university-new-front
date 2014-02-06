@@ -1,0 +1,109 @@
+<script>
+$(document).ready(function(){
+	
+	$('#imageupload').change(function(){
+			alert($(this).val());
+			//$('#preview').html("<img src='../assets/greendot.jpg'></img>")
+			$.ajax({
+
+				url: "/image_preview",
+				type: "GET",
+				data: {id: $(this).val()},
+				success: function(){
+       			 alert("siva");
+    			  }
+			});
+
+	});
+ });
+
+</script>
+
+<%=form_for @students, :html => {:multipart => true } do |t|%>
+<table>
+	<tr>
+		<td>
+		<%=t.label :name, "Full Name:"%>
+		</td>
+		<td>
+		<%=t.text_field :name%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%=t.label :fname, "Fathers Name:"%>
+		</td>
+		<td>
+			<%=t.text_field :fname%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%=t.label :dob, "Date-Of-Birth:"%>
+		</td>
+		<td>
+			<%=t.date_field :dob%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%=t.label :phone, "Phone"%>
+		</td>
+		<td>
+			<%=t.phone_field :phone%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%=t.label :gender, "Gender"%>
+		</td>
+		<td>
+			<%=t.radio_button :gender, "Male"%>Male
+			<%=t.radio_button :gender, "Female"%>Female
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%=t.label :standard, "Class"%>
+		</td>
+		<td>
+			<%=t.text_field :standard%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%=t.label :image, "Image"%>
+		</td>
+		<td>
+			<%#=t.file_field :image, :remote => true, :id => "imageupload"%>
+			<%=t.file_field :image%>
+		<!-- <div id="preview"></div>
+		 --></td>
+	</tr>
+	<tr>
+		<td>	
+			<%=fields_for Address.new do|f|%>
+			<%=f.label :district, "District"%>
+		</td>
+		<td>
+			<%=f.select(:district, District.all.collect{|t| t.name}) %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%=f.label :city, "City"%>
+		</td>
+		<td>
+			<%=f.text_field :city%>
+			<%end%>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td colspan="2"><%=t.submit%></td>
+	</tr>
+
+<%end%>
+</table>
+<div class="place_for_your_text"></div>

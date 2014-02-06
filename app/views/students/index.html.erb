@@ -1,0 +1,13 @@
+
+<table>
+<%@students.each do|stu|%>
+<tr>
+	<td><%=stu.name%></td>
+	<td><%=stu.dob%></td>
+	<td><%=stu.standard%></td>
+	<td><%=link_to "view Profile", student_path(stu.id)%></td></tr>
+<%end%>
+
+
+
+students index page

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  district: MyString
+  city: MyString
+  pincode: MyString
+  desc: MyString
+  addressable_id: 1
+  addressable_type: MyString
+
+two:
+  district: MyString
+  city: MyString
+  pincode: MyString
+  desc: MyString
+  addressable_id: 1
+  addressable_type: MyString
