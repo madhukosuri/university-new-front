@@ -9,10 +9,10 @@
 
 #d.each do|name|
 
-#District.create(:name => "#{name}")
+# District.create(:name => "#{name}")
 
-#end
-e=["Bhainsa","Mancherial","Mandamarri","Nirmal"]
-e.each do|name|
-	District.find(1).cities << City.create(:name => "#{name}")
-end
+# #end
+# e=["Bhainsa","Mancherial","Mandamarri","Nirmal"]
+# e.each do|name|
+# 	District.find(1).cities << City.create(:name => "#{name}")
+# end
