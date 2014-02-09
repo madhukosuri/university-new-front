@@ -15,7 +15,7 @@
     pool: 5
     username: root
     password: admin
-    #socket: /var/run/mysqld/mysqld.sock
+    socket: /var/run/mysqld/mysqld.sock
     host: 127.0.0.1
 
 # Warning: The database defined as "test" will be erased and
