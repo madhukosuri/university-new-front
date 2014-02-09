@@ -1,5 +1,5 @@
 class Teacher < ActiveRecord::Base
-	has_one :address, :as => :addressable, :dependent => :destroy
+	# has_one :address, :as => :addressable, :dependent => :destroy
 	accepts_nested_attributes_for :address
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 	validates_attachment_presence :image
