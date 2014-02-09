@@ -56,11 +56,10 @@ group :assets do
 end
 
 
-group :production do
-  gem 'pg'
-  # Deploy with Capistrano 	
-end
-gem 'rails_12factor', group: :production
+
+	gem 'pg', group: :production
+	  # Deploy with Capistrano 	
+	gem 'rails_12factor', group: :production
 
 
 # Use ActiveModel has_secure_password
