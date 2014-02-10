@@ -9,7 +9,8 @@
 
 #d.each do|name|
 
-# District.create(:name => "#{name}")
+ #District.create(:name => "#{name}")
+
 
 # #end
 # e=["Bhainsa","Mancherial","Mandamarri","Nirmal"]
